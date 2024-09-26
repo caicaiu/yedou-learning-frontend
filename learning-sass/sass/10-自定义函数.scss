@@ -1,0 +1,29 @@
+@function my-function($value) {
+  @return $value * 2;
+}
+
+.my-class {
+  width: my-function(10px);
+}
+
+@function my-linear-gradient($color1, $color2, $direction: to left) {
+
+}
+
+.root {
+  // 指定位置
+  background-image: my-linear-gradient($direction: to bottom, $color1: #000, $color2: #fff);
+}
+
+@function if($condition, $if-true, $if-false) {
+  @if $condition {
+    @return $if-true;
+  } @else {
+    @return $if-false;
+  }
+}
+
+.root {
+  // 条件判断
+  background-color: if($condition: true, $if-true: #000, $if-false: #fff);
+}

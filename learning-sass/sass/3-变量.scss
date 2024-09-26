@@ -1,0 +1,65 @@
+// 基本使用
+$color-primary: #333;
+$color-secondary: #666;
+$color-tertiary: #999;
+.box {
+  color: $color-primary;
+}
+
+
+// 变量作用域
+// 全局变量
+$global-size: 15px;
+.root {
+  // 全局变量
+  $global-color: red !global;
+  // 局部变量
+  $inner-color: blue;
+  font-size: $global-size;
+}
+
+.box2 {
+  color: $global-color;
+  line-height: $global-size;
+}
+
+
+// region 变量类型
+$font-size: 15;
+$font-color: "red";
+$bg-color: #333;
+$border-mode: false;
+$font-stack: 'Helvetica', 'Arial', sans-serif;
+$color-map: (
+        primary: #3498db,
+        secondary: #2ecc71,
+        danger: #e74c3c
+);
+$border-color: null;
+
+.box3 {
+  @if ($border-mode) {
+    border-color: $font-color;
+  } @else {
+    border-color: $bg-color;
+  }
+  font-size: $font-size;
+  color: $font-color;
+  font-family: $font-stack;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+
+  :hover {
+    background-color: map-get($color-map, primary);
+  }
+}
+
+// endregion
+
+// region 变量默认值
+$my-color: #333 !default;
+.box4 {
+  color: $my-color;
+}
+
+// endregion

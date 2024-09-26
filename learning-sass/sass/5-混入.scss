@@ -1,0 +1,74 @@
+// 混入的基本使用
+@mixin block {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background: red;
+}
+
+.root {
+  // 两个都可以
+  @include block();
+  @include block
+}
+
+
+// 混入类名的使用
+@mixin my-mixin {
+  .word-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2ecc71;
+  }
+}
+
+.root {
+  @include my-mixin()
+}
+
+
+// 混入参数的使用
+@mixin my-flex($item) {
+  display: flex;
+  justify-content: $item;
+  align-content: $item;
+}
+
+.root {
+  @include my-flex(center)
+}
+
+// 混入参数的值 和参数默认值
+@mixin my-position($top: 0,$right: 0,$bottom: 0,$left: 0) {
+  padding-left: $left;
+  padding-right: $right;
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+.root {
+  // 普通
+  //@include my-flex(10px, 20px 30px, 40px);
+  // 指定参数
+  //@include my-position($left: 10px, $right: 0px, $bottom: 20px, $top: 0px)
+
+  @include my-position($left: 10px)
+}
+
+
+// 动态参数的使用
+@mixin my-gradient($direction,  $gradient-color, $start-position...) {
+  // 获取第一个参数
+  background-color: nth($gradient-color, 1);
+  background-image: linear-gradient($direction, $gradient-color);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: nth($start-position, 1) nth($start-position, 2);
+}
+
+
+.root {
+  @include my-gradient(to right, #000, 0% 0%, 100% 0%)
+}
+
+

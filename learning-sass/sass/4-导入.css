@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "4-导入.css";
+.box {
+  background-color: "red";
+}
+
+.box2 {
+  color: #ddd;
+}
+
+.box3 {
+  font-size: "red";
+}
+
+/*# sourceMappingURL=4-%E5%AF%BC%E5%85%A5.css.map */

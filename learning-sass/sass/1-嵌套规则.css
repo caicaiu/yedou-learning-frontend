@@ -1,0 +1,66 @@
+nav {
+  background-color: red;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding: 20px;
+  border-right: 1px solid black;
+}
+nav ul li a {
+  color: white;
+}
+nav ul li a :hover {
+  color: blue;
+}
+
+.nav {
+  background-color: blue;
+}
+.nav ul {
+  list-style-type: circle;
+  display: flex;
+}
+.nav ul .item {
+  padding: 30px;
+  border: 1px solid black;
+}
+.nav ul .item a {
+  color: white;
+}
+.nav ul .item a:hover {
+  color: blue;
+}
+.nav-bg {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.parent .child, .parent {
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  background-color: pink;
+  font-size: 16px;
+  font-font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.parent .child {
+  height: 100px;
+  width: 100px;
+  background-color: purple;
+}
+
+/*# sourceMappingURL=1-%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99.css.map */

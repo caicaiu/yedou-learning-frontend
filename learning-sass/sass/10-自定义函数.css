@@ -1,0 +1,19 @@
+/* Error: Function finished without @return.
+ *    ,
+ * 9  | / @function my-linear-gradient($color1, $color2, $direction: to left) {
+ * 10 | | 
+ * 11 | \ }
+ *    '
+ *   10-自定义函数.scss 9:1    my-linear-gradient()
+ *   10-自定义函数.scss 15:21  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Function finished without @return.\a    \2577 \a 9  \2502  \250c  @function my-linear-gradient($color1, $color2, $direction: to left) {\a 10 \2502  \2502  \a 11 \2502  \2514  }\a    \2575 \a   10-\81ea \5b9a \4e49 \51fd \6570 .scss 9:1    my-linear-gradient()\a   10-\81ea \5b9a \4e49 \51fd \6570 .scss 15:21  root stylesheet";
+}

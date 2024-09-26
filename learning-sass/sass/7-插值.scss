@@ -1,0 +1,23 @@
+// 在选择器中使用
+$my-selector: '.my-class';
+
+#{$my-selector} {
+  background-color: red;
+}
+
+
+// 在属性值中使用
+$my-color: red;
+.root {
+  color: #{$my-color}
+}
+
+// 在url()函数中使用
+$my-image: 'image.png';
+.root {
+  background-image: url(#{$my-image});
+}
+
+// 在注释中使用
+$author: 'John';
+/* This is a comment by #{$author} */

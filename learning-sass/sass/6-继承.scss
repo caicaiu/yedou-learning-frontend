@@ -1,0 +1,48 @@
+.alert {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.alert-success {
+  // 继承的基本使用 缺点,在编译的时候,会生成重复的代码 alert(我们不需要编译处理)
+  // 使用% 作为父类,则不会被编译
+  @extend .alert;
+  background-color: green;
+}
+
+.alert-info {
+  @extend .alert;
+  background-color: blue;
+}
+
+.alert-warning {
+  @extend .alert;
+  background-color: orange;
+}
+
+.alert-error {
+  @extend .alert;
+  background-color: red;
+}
+
+%my-alert {
+  height: 200px;
+  width: 100px;
+  font-size: 20px;
+}
+
+.alert-success-my {
+  @extend %my-alert;
+  background-color: green;
+}
+
+.alert-info-my {
+  @extend %my-alert;
+  background-color: blue;
+}
+

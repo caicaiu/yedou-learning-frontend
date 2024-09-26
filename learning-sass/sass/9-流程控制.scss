@@ -1,0 +1,51 @@
+// if
+$var: 10;
+.root {
+  @if $var < 10 {
+    color: red;
+  } @else if ($var < 20) {
+    color: blue;
+  } @else {
+    color: green;
+  }
+}
+
+// for
+.itmes {
+  @for $i from 1 to 4 {
+    & item-#{$i} {
+      width: 20px * $i;
+    }
+  }
+}
+
+.my-items {
+  @for $i from 1 through 4 {
+    & item-#{$i} {
+      width: 20px * $i;
+    }
+  }
+}
+
+
+// each
+$colors: red, blue, green;
+.my-root {
+  @each $color in $colors {
+    .item-#{$color} {
+      background-color: $color;
+    }
+  }
+}
+
+
+// while
+$i: 0;
+.my-box {
+  @while $i < 10 {
+    & item-#{$i} {
+      width: 20px * $i;
+    }
+    $i: $i + 1;
+  }
+}

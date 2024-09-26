@@ -1,0 +1,41 @@
+.alert, .alert-error, .alert-warning, .alert-info, .alert-success {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-info {
+  background-color: blue;
+}
+
+.alert-warning {
+  background-color: orange;
+}
+
+.alert-error {
+  background-color: red;
+}
+
+.alert-info-my, .alert-success-my {
+  height: 200px;
+  width: 100px;
+  font-size: 20px;
+}
+
+.alert-success-my {
+  background-color: green;
+}
+
+.alert-info-my {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=6-%E7%BB%A7%E6%89%BF.css.map */

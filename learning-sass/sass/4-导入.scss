@@ -1,0 +1,20 @@
+// 自动忽略前缀
+@import "public";
+// 可以导入css文件
+@import "4-导入.css";
+// 导入的代码不要被编译成css文件
+@import "demo";
+
+.box {
+  background-color: $bg-color;
+}
+
+.box2 {
+  color: $font-color;
+}
+
+.box3 {
+  // 内部导入
+  @import "public";
+  font-size: $bg-color;
+}
