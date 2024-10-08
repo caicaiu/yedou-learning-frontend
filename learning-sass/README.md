@@ -771,3 +771,53 @@ $i: 1;
 
 ```
 
+# 在Vue中使用
+
+```
+npm install -D sass-loader sass
+```
+
+开始编写
+
+```vue
+<script setup lang="ts">
+</script>
+
+<template>
+  <div id="my-app">
+    <div class="header">头部</div>
+    <div class="content"></div>
+    <div class="footer"></div>
+  </div>
+
+</template>
+
+<style scoped lang="scss">
+@import "style";
+
+$header-background-color: #333;
+
+#my-app {
+  & .header {
+    background: $header-background-color;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+  }
+
+  & .content {
+    background: $content-color;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+</style>
+
+```
+
+
+
