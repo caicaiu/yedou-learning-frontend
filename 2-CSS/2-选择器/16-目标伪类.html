@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+    .section {
+        padding: 20px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+    }
+
+    /* :target 伪类样式 */
+    .section:target {
+        background-color: yellow; /* 当前活动的 section 背景色变为黄色 */
+    }
+</style>
+<body>
+    <h1>Navigation</h1>
+    <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+    </ul>
+    <div id="section1" class="section">Section 1 Content</div>
+    <div id="section2" class="section">Section 2 Content</div>
+    <div id="section3" class="section">Section 3 Content</div>
+</body>
+</html>

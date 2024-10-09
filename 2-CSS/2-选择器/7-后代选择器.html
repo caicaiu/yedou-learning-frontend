@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .grandfather {
+        height: 200px;
+        width: 200px;
+        background: skyblue;
+    }
+
+    .father {
+        height: 100px;
+        width: 100px;
+        background: yellow;
+    }
+
+    /*后代选择器 选择父元素的所有后代元素*/
+    .grandfather .son {
+        height: 50px;
+        width: 50px;
+        background: red;
+        color: skyblue;
+    }
+</style>
+
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son">this is a son</div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 伪元素选择器示例</title>
+</head>
+<style>
+
+    h2::first-letter{
+        color: red;
+    }
+    p::first-line{
+        background: red;
+    }
+    p::selection{
+        background: yellow;
+    }
+
+    input::placeholder{
+        background: #2ecc71;
+    }
+    h2::before{
+        content: "Hello, ";
+        color: blue;
+    }
+    h2::after{
+        content: "!";
+        color: green;
+    }
+
+</style>
+<body>
+    <h2>欢迎使用 CSS 伪元素选择器</h2>
+    <p>
+        这是一个关于伪元素选择器的简单示例。尝试选中这段文本，看看选中效果。
+        这里是另一段文本，用于展示第一个字母和第一行的样式。
+    </p>
+    <input type="text" placeholder="输入你的名字">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+    /* 默认样式 */
+    p {
+        font-family: Arial, sans-serif;
+    }
+
+    /* 针对英语内容的样式 */
+    p:lang(en) {
+        color: blue; /* 英文内容的文本颜色为蓝色 */
+    }
+
+    /* 针对法语内容的样式 */
+    p:lang(fr) {
+        color: red; /* 法文内容的文本颜色为红色 */
+    }
+
+    /* 针对中文内容的样式 */
+    p:lang(zh) {
+        color: green; /* 中文内容的文本颜色为绿色 */
+    }
+</style>
+<body>
+    <p lang="en">Hello, how are you?</p>
+    <p lang="fr">Bonjour, comment ça va?</p>
+    <p lang="zh">你好，你好吗？</p>
+</body>
+</html>

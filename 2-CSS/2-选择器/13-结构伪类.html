@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类示例</title>
+</head>
+<style>
+    /* 选择第一个子元素 */
+    ul li:first-child {
+        color: red;
+    }
+
+    /* 选择最后一个子元素 */
+    ul li:last-child {
+        color: skyblue;
+    }
+
+    /* 选择奇数子元素 */
+    ul li:nth-child(2) {
+        color: green;
+    }
+
+    /* 4. 倒数第一个列表项 */
+    li:nth-last-child(1) {
+        text-decoration: underline; /* 倒数第一个列表项下划线 */
+    }
+
+</style>
+<body>
+    <h2>列表示例</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <h2>段落示例</h2>
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+</body>
+</html>
+

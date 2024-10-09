@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    input:enabled {
+        background: red;
+    }
+
+    button:enabled {
+        background: red;
+    }
+
+    button:disabled {
+        background: skyblue;
+    }
+
+    /* 选中的单选按钮样式 */
+    input:checked {
+        height: 200px;
+        width: 200px;
+    }
+</style>
+
+<body>
+    <input type="text">
+    <button>按钮</button>
+    <button disabled>按钮</button>
+
+    <h2>单选按钮</h2>
+    <label>
+        <input type="radio" name="radioGroup" id="radio1">
+        Radio Option 1
+    </label>
+    <label>
+        <input type="radio" name="radioGroup" id="radio2" checked>
+        Radio Option 2 (Checked)
+    </label>
+    <label>
+        <input type="radio" name="radioGroup" id="radio3">
+        Radio Option 3
+    </label>
+</body>
+<script>
+</script>
+</html>

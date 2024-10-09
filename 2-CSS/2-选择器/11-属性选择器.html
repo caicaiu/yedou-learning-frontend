@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    li[title] {
+        background: red;
+    }
+
+    /* 完全匹配字符 */
+    li[title="a"] {
+        background: yellow;
+    }
+
+    /* 开头匹配字符 */
+    li[title^="a"] {
+        background: green;
+    }
+
+    /* 结尾匹配字符 */
+    li[title$="a"] {
+        background: skyblue;
+    }
+
+    /* 包含匹配字符 */
+    li[title*="a"] {
+        background: pink;
+    }
+
+    /* 以空格分隔的匹配字符 */
+    li[title~="a"]{
+        background: purple;
+    }
+    /* 以-分隔的匹配字符 */
+    li[title|="a"]{
+        background: orange;
+    }
+
+
+</style>
+
+<body>
+    <ul>
+        <li title="a">item1：a</li>
+        <li title="a b">item2：a b</li>
+        <li title="c a b">item2</li>
+        <li title="a-b" class="cli">item4：a-b</li>
+        <li title="abc" class="cli">item5：abc</li>
+        <li title="cab" class="cli">item6：cab</li>
+        <li title="cba" class="cli">item7：cba</li>
+        <li title="cbA1" class="cli">item8：cbA1</li>
+    </ul>
+</body>
+<script>
+</script>
+</html>

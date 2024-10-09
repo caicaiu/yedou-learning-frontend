@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    li:not(.selected) {
+        background: red;
+    }
+
+    li:not(li:first-child) {
+        color: skyblue;
+    }
+</style>
+
+<body>
+    <ul>
+        <li class="item">Item 1</li>
+        <li class="item selected">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+</body>
+<script>
+</script>
+</html>
