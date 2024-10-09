@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        /*像素*/
+        height: 300px;
+        /*百分比*/
+        width: 50%;
+        font-size: 20px;
+        /*em 相对于当前元素的字体大小*/
+        text-indent: 2em;
+        /*rem 相对于根元素的字体大小*/
+        background-position: 20rem;
+        /*vw 相对于视口宽度的百分比*/
+        background-image: url("https://www.baidu.com/img/bd_logo1.png");
+
+        background-color: #f00;
+    }
+
+    .box {
+        height: 100vh;
+        width: 100vw;
+        background-color: #0f0;
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+    <div class="root">
+        拉开距离科技
+    </div>
+</body>
+<script>
+</script>
+</html>

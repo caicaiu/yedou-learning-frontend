@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .root {
+        height: 500px;
+        border: 1px solid #ccc;
+        width: 500px;
+        /* 背景颜色 */
+        background-color: #2ecc71;
+        /* 背景图片 */
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16iAWY_F8AzW6wJ5LAql0thuPZzFmb20Nyw&s");
+        /* 背景图片的平铺方式 */
+        background-repeat: no-repeat;
+        /*background-repeat: repeat-x;*/
+        /*background-repeat: repeat-y;*/
+
+        /* 背景图片的位置  x y 没有则默认居中 */
+        /*background-position: center;*/
+        /*background-position: right center;*/
+        background-position: 100px 100px;
+        background-position: 100px center;
+
+
+
+    }
+    .box{
+        height: 500px;
+        width: 500px;
+        /*    复合属性*/
+        background: #e74c3c url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16iAWY_F8AzW6wJ5LAql0thuPZzFmb20Nyw&s") no-repeat 100px 100px;
+    }
+</style>
+<body>
+    <div class="root"></div>
+    <div class="box"></div>
+</body>
+</html>

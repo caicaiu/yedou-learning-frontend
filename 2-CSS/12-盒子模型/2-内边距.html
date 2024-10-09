@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        height: 100px;
+        width: 100px;
+        background-color: purple;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+    .box{
+        height: 200px;
+        width: 200px;
+        background-color: yellow;
+        padding: 10px;                 /* 所有方向的内边距均为 10px */
+        padding: 10px 15px;            /* 上下为 10px，左右为 15px */
+        padding: 10px 15px 20px;       /* 上为 10px，左右为 15px，下为 20px */
+        padding: 10px 15px 20px 25px;  /* 上、右、下、左分别为 10px, 15px, 20px, 25px */
+    }
+</style>
+
+<body>
+    <div class="root">
+        拉开距离科技
+    </div>
+    <div class="box"></div>
+</body>
+<script>
+</script>
+</html>
