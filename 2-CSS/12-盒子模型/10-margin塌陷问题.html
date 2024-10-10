@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .outer {
+        /*解决塌陷问题*/
+        /*overflow: hidden;*/
+        /*border: 1px solid black;*/
+        padding: 1px;
+        width: 400px;
+        background-color: purple;
+    }
+
+    .box1, .box2 {
+        height: 100px;
+        width: 100px;
+    }
+
+    .box1 {
+        background-color: red;
+        /*被塌陷的margin*/
+        margin-top: 50px;
+    }
+
+    .box2 {
+        /*被塌陷的margin*/
+        margin-bottom: 50px;
+
+        background-color: blue;
+    }
+</style>
+
+<body>
+
+    <div class="outer">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+<script>
+</script>
+</html>
