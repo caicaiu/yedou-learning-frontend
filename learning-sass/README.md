@@ -78,7 +78,7 @@ nav ul li a :hover {
   color: blue;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=style.css.map */
 
 ```
 

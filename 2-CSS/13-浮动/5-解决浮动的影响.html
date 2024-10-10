@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        border: 1px solid black;
+        /*第一种解决方案*/
+        /*height: 200px;*/
+        /*第二种解决方案*/
+        /*overflow: scroll;*/
+        /*    第三种解决方案*/
+        /*float: left;*/
+        /*    第四种解决方案*/
+    }
+
+    .box {
+        height: 100px;
+        width: 100px;
+        background-color: skyblue;
+        margin: 10px;
+        border: 1px solid black;
+    }
+
+    .box1, .box2, .box3,.box4 {
+
+        float: left;
+    }
+
+    /*.box4 {*/
+    /*    display: inline-block;*/
+    /*    clear: both;*/
+    /*}*/
+
+    .root::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .letter {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div class="root">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+    </div>
+    <div class="letter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel tincidunt bibendum,
+        velit turpis
+        malesuada velit, vel malesuada velit sapien vel velit. Praesent euismod, sapien vel tincidunt bibendum, velit turpis
+        malesuada velit, vel malesuada velit sapien vel velit.
+    </div>
+</body>
+<script>
+</script>
+</html>

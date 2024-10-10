@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box1, .box2 {
+        height: 200px;
+        width: 200px;
+    }
+
+    .box1 {
+        background-color: purple;
+        position: absolute;
+        top: 50px;
+    }
+
+    .box2 {
+        background-color: yellow;
+    }
+
+    .grandparent {
+        height: 200px;
+        width: 200px;
+
+        background-color: green;
+    }
+
+    .parent {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+    }
+
+    .child {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        height: 50px;
+        width: 50px;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+</html>

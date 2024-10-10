@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .header div {
+        height: 80px;
+        background-color: #cccccc;
+    }
+
+    .header::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .logo, .banner1, .banner2 {
+        float: left;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .banner1 {
+        margin: 0 10px;
+        width: 540px;
+    }
+
+    .banner2 {
+        width: 200px;
+    }
+
+    .nav {
+        margin-top: 10px;
+        background-color: #cccccc;
+        width: 960px;
+        height: 30px;
+    }
+
+    .content::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .left, .right {
+        float: left;
+    }
+
+    .left .top div {
+        height: 200px;
+        width: 370px;
+        background-color: purple;
+        float: left;
+    }
+
+    .left .top::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .left .top div:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .left .bottom div {
+        height: 200px;
+        width: 180px;
+        background-color: yellow;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .left .bottom {
+        margin-top: 10px;
+    }
+
+    .left .bottom::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .left .bottom div:last-child {
+        margin-right: 0;
+    }
+
+    .right div {
+        height: 130px;
+        width: 200px;
+        background-color: green;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .right div:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer {
+        margin-top: 10px;
+        background-color: #cccccc;
+        height: 60px;
+        width: 960px;
+        text-align: center;
+    }
+</style>
+
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">logo</div>
+        <div class="banner1">banner1</div>
+        <div class="banner2">banner2</div>
+    </div>
+    <div class="nav">菜单</div>
+    <div class="content">
+        <div class="left">
+            <div class="top">
+                <div>栏目1</div>
+                <div>栏目2</div>
+            </div>
+            <div class="bottom">
+                <div>栏目3</div>
+                <div>栏目4</div>
+                <div>栏目5</div>
+                <div>栏目6</div>
+            </div>
+        </div>
+        <div class="right">
+            <div>栏目七</div>
+            <div>栏目八</div>
+            <div>栏目九</div>
+        </div>
+    </div>
+    <div class="footer">页脚</div>
+</div>
+</body>
+<script>
+</script>
+</html>

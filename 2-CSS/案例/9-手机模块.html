@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        width: 1226px;
+        height: 615px;
+        background-color: pink;
+        margin: 0 auto;
+    }
+
+    .leftfix {
+        float: left;
+    }
+
+    .rightfix {
+        float: right;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .left{
+        width: 234px;
+        height: 615px;
+        background-color: purple;
+    }
+    .right{
+        width: 992px;
+        height: 615px;
+        background-color: skyblue;
+    }
+    .right .item{
+        width: 234px;
+        height: 300px;
+        background-color: pink;
+        margin-left: 14px;
+        margin-bottom: 14px;
+    }
+</style>
+
+<body>
+<div class="container clearfix">
+    <div class="left leftfix"></div>
+    <div class="right leftfix clearfix">
+        <div class="item leftfix">1</div>
+        <div class="item leftfix">2</div>
+        <div class="item leftfix">3</div>
+        <div class="item leftfix">4</div>
+        <div class="item leftfix">5</div>
+        <div class="item leftfix">6</div>
+        <div class="item leftfix">7</div>
+        <div class="item leftfix">8</div>
+    </div>
+</div>
+</body>
+<script>
+</script>
+</html>
