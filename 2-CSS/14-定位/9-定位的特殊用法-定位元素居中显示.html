@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .parent {
+        height: 500px;
+        width: 500px;
+        background-color: purple;
+        position: relative;
+    }
+
+    .child {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        position: absolute;
+
+    }
+    /*第一种居中方式*/
+    /*.child{*/
+    /*    left: 0;*/
+    /*    right: 0;*/
+    /*    top: 0;*/
+    /*    bottom: 0;*/
+    /*    margin: auto;*/
+    /*}*/
+    /*第二种居中方式*/
+    .child{
+        left: 50%;
+        top: 50%;
+        /*自身宽高的一半*/
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+<script>
+</script>
+</html>
