@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI导航</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #F2F2FF;
+    }
+
+    #app {
+        padding: 20px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .search {
+        margin-top: 20px;
+        font-size: 0;
+    }
+
+    .search input[type="text"] {
+        padding: 10px;
+        vertical-align: middle;
+        height: 18px;
+        border: none;
+        width: 500px;
+        outline: none;
+    }
+
+    .search input[type="text"]:focus {
+        box-shadow: 0 0 1px #152DA5;
+        border: 1px solid #152DA5;
+        border-right: none;
+    }
+
+    .search input[type="text"]:hover {
+        border: 1px solid #152DA5;
+        border-right: none;
+    }
+
+    .search button {
+        border: none;
+        height: 40px;
+        vertical-align: middle;
+        background-image: url("https://pic.code-nav.cn/search.png");
+        color: #fff;
+        background-color: #152DA5;
+        width: 50px;
+    }
+
+    .category {
+        margin-top: 20px;
+
+
+    }
+
+    .category span {
+        display: inline-block;
+        margin: 0 5px;
+        width: 90px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+
+    .category span:hover {
+        color: #40A9FF;
+    }
+
+    .content {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        display: inline-block;
+        height: 80px;
+        width: 500px;
+    }
+
+    .card .cover {
+        margin-top: 18px;
+        margin-left: 10px;
+    }
+
+    .card .cover img {
+        height: 48px;
+        width: 48px;
+    }
+
+    .card .info {
+        margin-left: 20px;
+    }
+
+    .card .info .title {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .card::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .card .cover, .card .info {
+        float: left;
+    }
+</style>
+
+<body>
+<div id="app">
+    <h1>超全面的AI导航</h1>
+    <div class="search">
+        <input type="text" placeholder="请输入搜索内容">
+        <button>搜索</button>
+    </div>
+    <div class="category">
+        <span>热门推荐</span>
+        <span>内容创作</span>
+        <span>高效办公</span>
+        <span>图像</span>
+        <span>音频</span>
+        <span>视频</span>
+        <span>设计</span>
+        <span>设计</span>
+        <span>编程开发</span>
+        <span>智能对话</span>
+        <span>内容检测</span>
+        <span>训练模型</span>
+        <span>教程</span>
+        <span>其他</span>
+    </div>
+    <div class="content">
+        <div class="card">
+            <div class="cover">
+                <img src="https://pic.code-nav.cn/yucongming_nav_item/6xorli.webp">
+            </div>
+            <div class="info">
+                <div class="title"> Xmind Copilot</div>
+                <div class="desc">思维导图A助手</div>
+            </div>
+        </div>
+
+                <div class="card">
+                    <div class="cover">
+                        <img src="https://pic.code-nav.cn/yucongming_nav_item/6xorli.webp">
+                    </div>
+                    <div class="title">1</div>
+                    <div class="desc">2</div>
+                </div>
+                <div class="card">
+                    <div class="cover">
+                        <img src="https://pic.code-nav.cn/yucongming_nav_item/6xorli.webp">
+                    </div>
+                    <div class="title">1</div>
+                    <div class="desc">2</div>
+                </div>
+    </div>
+</div>
+
+</body>
+<script>
+</script>
+</html>

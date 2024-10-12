@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .outer {
+        margin: 50px auto;
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+    }
+
+    .inner {
+        height: 200px;
+        width: 200px;
+        background-color: skyblue;
+        /*transform: translateX(100px);*/
+        /*transform: translateY(100px);*/
+        /*transform: translate(100px, 100px);*/
+        /*走自身的50%*/
+        transform: translate(50%, 50%);
+    }
+
+    .parent {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        position: relative;
+    }
+
+    .child {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: purple;
+        transform: translate(-50%, -50%);
+    }
+
+</style>
+
+<body>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+<div class="parent">
+    <div class="child"></div>
+</div>
+</body>
+<script>
+</script>
+</html>
