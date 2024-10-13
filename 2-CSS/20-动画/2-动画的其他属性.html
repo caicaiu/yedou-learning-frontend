@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .outer {
+        height: 50px;
+        width: 1000px;
+        border: 1px solid black;
+    }
+
+    .inner {
+        height: 50px;
+        width: 100px;
+        background-color: red;
+        /*第一步: 设置动画的名称*/
+        animation-name: wangyoudong;
+        /*第三步: 设置动画的时长*/
+        animation-duration: 1s;
+        /*其他属性*/
+        animation-timing-function: linear;
+        /*动画播放次数*/
+        /*animation-iteration-count: 3;*/
+        /*循环播放*/
+        /*animation-iteration-count: infinite;*/
+
+        /*动画播放方向 左右运动*/
+        /*animation-direction: alternate;*/
+
+        /*动画以外的位置   动画结束后保留最后一帧*/
+        animation-fill-mode: forwards;
+
+        /*动画是否播放   动画暂停*/
+        animation-play-state: paused;
+
+
+    }
+
+    /*第二步: 设置动画的关键帧*/
+    @keyframes wangyoudong {
+        /*第一帧*/
+        from {
+            transform: translateX(0);
+        }
+        /*最后一针*/
+        to {
+            transform: translateX(900px);
+            background-color: skyblue;
+
+        }
+    }
+
+</style>
+
+<body>
+<div class="outer">
+    <div class="inner">
+
+    </div>
+</div>
+</body>
+<script>
+</script>
+</html>

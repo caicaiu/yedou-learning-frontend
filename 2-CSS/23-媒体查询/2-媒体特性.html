@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+
+    }
+
+    /*视图的宽度等于800时 */
+    @media (width: 800px) {
+        .root {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    }
+
+    /*视图的宽度小于600时 */
+    @media (max-width: 600px) {
+        .root {
+            height: 50px;
+            width: 50px;
+            background-color: green;
+        }
+    }
+
+    /*视图的宽度大于800时 */
+    @media (min-width: 800px) {
+        .root{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="root">
+        拉开距离科技
+    </div>
+</body>
+<script>
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .outer {
+        height: 600px;
+        width: 900px;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        align-content: center;
+            }
+
+    .inner {
+        height: 100px;
+        width: 200px;
+        border: 1px solid blue;
+        background-color: skyblue;
+    }
+
+    .inner2 {
+        flex-basis: 300px;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner">3</div>
+    </div>
+</body>
+<script>
+</script>
+</html>

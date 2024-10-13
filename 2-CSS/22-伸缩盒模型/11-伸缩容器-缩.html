@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .outer {
+        height: 600px;
+        width: 438px;
+        border: 1px solid red;
+        display: flex;
+        flex-shrink: 1;
+        /*flex-grow: 1;*/
+    }
+
+    .inner {
+        height: 100px;
+        width: 200px;
+        border: 1px solid blue;
+        background-color: skyblue;
+    }
+
+    .inner2 {
+        flex-grow: 1;
+    }
+
+    .inner2 {
+        flex-grow: 2;
+    }
+
+    .inner3 {
+        flex-grow: 3;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+<script>
+</script>
+</html>

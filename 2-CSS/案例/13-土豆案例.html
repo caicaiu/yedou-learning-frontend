@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        height: 252px;
+        width: 448px;
+        background-color: purple;
+        position: relative;
+    }
+
+    .root > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .play {
+        position: absolute;
+        height: 252px;
+        width: 448px;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        display: none;
+        background-image: url("images/arr.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .root:hover .play{
+        display: block;
+    }
+
+    .root:hover {
+        background-color: skyblue;
+    }
+</style>
+
+<body>
+<div class="root">
+    <img src="images/tudou.jpg">
+    <div class="play">
+    </div>
+</div>
+</body>
+<script>
+</script>
+</html>

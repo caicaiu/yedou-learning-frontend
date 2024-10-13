@@ -1,0 +1,22 @@
+/*版心*/
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*region shortcut*/
+.shortcut {
+    background-color: #F1F1F1;
+    height: 31px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.shortcut-left {
+    display: flex;
+}
+
+/*endregion shortcut*/
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tb-promo {
+        height: 280px;
+        width: 520px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .tb-promo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .prev, .next {
+        height: 30px;
+        width: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        line-height: 30px;
+        color: white;
+        text-align: center;
+        position: absolute;
+    }
+
+    .prev {
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+
+        left: 0;
+        top: 50%;
+    }
+
+    .next {
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        right: 0;
+        top: 50%;
+    }
+
+    .promo-nav {
+        list-style: none;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 12px;
+        width: 70px;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        line-height: 12px;
+    }
+
+    .promo-nav::after {
+        content: "";
+        display: block;
+        clear: both;
+
+    }
+
+    .promo-nav li {
+        margin: 3px;
+        height: 8px;
+        width: 8px;
+        background-color: white;
+        border-radius: 50%;
+        float: left;
+    }
+
+    .promo-nav li:nth-child(4) {
+        background-color: red;
+    }
+</style>
+
+<body>
+<div class="tb-promo">
+    <img src="images/tb.jpg">
+    <div class="prev">&lt;</div>
+    <div class="next">&gt;</div>
+    <ul class="promo-nav">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+<script>
+</script>
+</html>

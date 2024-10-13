@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        /*height: 200px;*/
+        /*width: 100%;*/
+        /*background-color: purple;*/
+    }
+
+    /* 视口宽度小于或等于 700px 时，应用以下样式 */
+    @media (min-width: 700px) and (max-width: 800px) {
+        .root {
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+    }
+
+
+    /* 视口宽度大于或等于 500px 小于或等于 600px 时，应用以下样式 */
+    @media (min-width: 500px) or (max-width: 600px) {
+        .root {
+            height: 100px;
+            width: 100px;
+            background-color: skyblue;
+        }
+    }
+
+    /*不是屏幕设备时，应用以下样式 */
+    @media not screen {
+        .root {
+            height: 300px;
+            width: 300px;
+            background-color: grey;
+        }
+    }
+
+    /*仅打印时，应用以下样式 */
+    @media only print {
+        .root{
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+        }
+    }
+</style>
+
+<body>
+    <div class="root">
+        拉开距离科技
+    </div>
+</body>
+<script>
+</script>
+</html>

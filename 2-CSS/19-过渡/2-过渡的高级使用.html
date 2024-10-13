@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        height: 500px;
+        border: 1px solid black;
+    }
+
+    .box {
+        height: 50px;
+        width: 100px;
+        transition: width 3s;
+    }
+
+    .container:hover .box {
+        width: 100%;
+    }
+
+    .box1 {
+        background-color: red;
+        transition-timing-function: ease;
+    }
+
+    .box2 {
+        background-color: green;
+        transition-timing-function: linear;
+    }
+
+    .box3 {
+        background-color: blue;
+        transition-timing-function: ease-in;
+    }
+
+    .box4 {
+        background-color: yellow;
+        transition-timing-function: ease-out;
+    }
+
+    .box5 {
+        background-color: purple;
+        transition-timing-function: ease-in-out;
+    }
+
+    .box6 {
+        background-color: orange;
+        transition-timing-function: step-start;
+    }
+
+    .box7 {
+        background-color: pink;
+        transition-timing-function: step-end;
+    }
+
+    .box8 {
+        background-color: brown;
+        transition-timing-function: steps(20, start);
+    }
+
+    .box9 {
+        background-color: gray;
+        transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box box1">ease 慢-快-慢</div>
+        <div class="box box2">linear 匀速</div>
+        <div class="box box3">ease-in 开始慢-快</div>
+        <div class="box box4">ease-out 开始快-慢</div>
+        <div class="box box5">ease-in-out 慢-快-慢</div>
+        <div class="box box6">step-start 直接跳到结束值</div>
+        <div class="box box7">step-end 等到时间到后才跳到结束值</div>
+        <div class="box box8">steps 分布的匀速过渡</div>
+        <div class="box box9">贝塞尔曲线</div>
+    </div>
+</body>
+<script>
+</script>
+</html>
