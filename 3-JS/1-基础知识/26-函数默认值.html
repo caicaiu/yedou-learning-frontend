@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function sum(a, b) {
+
+        console.log(a, b)
+        console.log(a + b);
+    }
+
+    sum(1, 2);
+
+    // 1 undefined
+    sum(1);
+
+    // 定义默认值
+    function sum2(a = 0, b = 0) {
+        console.log(a, b);
+        console.log(a + b);
+    }
+
+    sum2(1, 2);
+    sum2(1);
+</script>
+</html>

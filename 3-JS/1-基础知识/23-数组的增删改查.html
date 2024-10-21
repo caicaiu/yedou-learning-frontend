@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    let items = [1, 5, 2, 3, 6, 41, 20];
+    // 查询方法
+    console.log(items.indexOf(2)) // 查询第一个2的索引，没有返回-1
+    console.log(items.lastIndexOf(2)) // 查询最后一个2的索引，没有返回-1
+    console.log(items.includes(10)) // 查询是否包含2，返回true或false
+
+    // 增加方法
+    items.push(21); // 在数组末尾添加元素
+    items.unshift(10); // 在数组开头添加元素
+    console.log(items)
+
+    // 删除方法
+    items.pop(); // 删除数组末尾元素
+    items.shift(); // 删除数组开头元素
+    console.log(items)  // [1, 5, 2, 3, 6, 41, 20]
+    items.splice(2, 1); // 从索引2开始删除1个元素
+    console.log(items) // [1, 5, 3, 6, 41, 20]
+
+    // 修改方法
+    items[2] = 100; // 修改索引为2的元素为100
+</script>
+</html>

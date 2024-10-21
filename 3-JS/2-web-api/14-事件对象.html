@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<textarea class="root">
+
+</textarea>
+</body>
+<script>
+    document.querySelector('.root').addEventListener('click', function (event) {
+        console.log(event);
+        console.log(event.target)
+        console.log(event.currentTarget)
+        console.log(event.type)
+        console.log(event.clientX)
+        console.log(event.clientY)
+    })
+    document.querySelector('.root').addEventListener('keydown', function (event) {
+        console.log(event.key)
+    })
+</script>
+</html>

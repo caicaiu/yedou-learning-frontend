@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div id="myElement" data-user-id="123" data-role="admin">用户信息</div>
+</body>
+<script>
+    const myElement = document.getElementById("myElement")
+    var dataset = myElement.dataset;
+    console.log(dataset)
+    console.log(dataset.userId)
+    console.log(dataset.role)
+</script>
+</html>

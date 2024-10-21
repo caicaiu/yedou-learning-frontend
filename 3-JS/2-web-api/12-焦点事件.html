@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<input type="text">
+</body>
+<script>
+    var htmlInputElement = document.querySelector('input');
+    htmlInputElement.addEventListener('focus', function () {
+        console.log('获取焦点')
+    })
+    htmlInputElement.addEventListener('blur', function () {
+        console.log('失去焦点')
+    })
+</script>
+</html>

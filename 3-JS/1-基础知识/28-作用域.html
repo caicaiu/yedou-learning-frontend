@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 全局作用域 任何地方都可以访问
+    var a = 10;
+
+    //
+    function test() {
+        // 局部作用域
+        console.log(a)
+    }
+
+    test()
+
+    function test2() {
+        // 局部作用域,只能在test2函数内部访问
+        let c = 30;
+    }
+    //  c is not defined
+    console.log(c);
+</script>
+</html>

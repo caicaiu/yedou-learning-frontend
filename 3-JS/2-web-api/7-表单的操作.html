@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+<input type="text" value="zhangsan">
+<input type="checkbox">
+<button>提交</button>
+</body>
+<script>
+    var htmlInputElement = document.querySelector('input');
+    console.log(htmlInputElement.value)
+    htmlInputElement.value = 'lisi';
+
+    // 修改类型
+    htmlInputElement.type = 'password';
+    // 复选框
+    var element = document.querySelector('input[type="checkbox"]');
+    console.log(element.checked)
+    element.checked = true;
+
+    var btn = document.querySelector('button');
+    btn.disabled = true;
+</script>
+</html>

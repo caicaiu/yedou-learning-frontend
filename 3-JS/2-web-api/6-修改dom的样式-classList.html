@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        height: 100px;
+        width: 100px;
+        font-size: 20px;
+        color: black;
+        border: 1px solid black;
+    }
+
+
+    .sky-blue-background {
+        background-color: skyblue;
+    }
+
+    .active {
+        color: white;
+    }
+
+    .toggle {
+        font-size: 30px;
+    }
+</style>
+
+<body>
+<div class="root sky-blue-background">
+    拉开距离科技
+</div>
+</body>
+<script>
+    var root = document.querySelector('.root');
+    root.classList.add("active")
+    root.classList.remove("sky-blue-background")
+    // 有就删除，没有就添加
+    root.classList.toggle("toggle")
+</script>
+</html>

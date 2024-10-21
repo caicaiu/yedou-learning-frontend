@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    let obj = {
+        name: "拉开距离科技",
+        age: 2,
+        sex: "男"
+    }
+    // 查询
+    console.log(obj.name); // 拉开距离科技
+    console.log(obj['sex'])
+
+    // 修改
+    obj.age = 3;
+    console.log(obj.age)
+
+    // 增加
+    obj.address = "北京市海淀区";
+    console.log(obj.address)
+
+
+    // 删除
+    delete obj.age;
+    console.log(obj.age)
+</script>
+</html>
