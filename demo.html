@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频推荐界面</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .navbar, .footer { display: flex; justify-content: space-around; background-color: #f8f8f8; padding: 10px; }
+        .video-list { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .video-item { width: 45%; margin-bottom: 20px; }
+        .thumbnail { width: 100%; height: auto; background-color: #ccc; }
+        .video-info { padding: 5px 0; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <span>直播</span>
+    <span style="color: pink;">推荐</span>
+    <span>热门</span>
+    <span>动画</span>
+    <span>影视</span>
+</div>
+
+<div class="video-list">
+    <div class="video-item">
+        <div class="thumbnail">缩略图</div>
+        <div class="video-info">
+            <div>视频标题示例 1</div>
+            <div>16万点赞</div>
+        </div>
+    </div>
+    <div class="video-item">
+        <div class="thumbnail">缩略图</div>
+        <div class="video-info">
+            <div>视频标题示例 2</div>
+            <div>3455 观看</div>
+        </div>
+    </div>
+    <!-- 添加更多视频项 -->
+</div>
+
+<div class="footer">
+    <span>首页</span>
+    <span>动态</span>
+    <span>+</span>
+    <span>会员购</span>
+    <span>我的</span>
+</div>
+
+</body>
+</html>
