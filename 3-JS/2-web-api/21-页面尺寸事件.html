@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .root {
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin: 20px;
+        border: 10px solid red;
+    }
+
+    .parent {
+        height: 300px;
+        width: 300px;
+        background-color: skyblue;
+        position: relative;
+    }
+
+    .child {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+<div class="parent">
+    <div class="child">我是孩子</div>
+</div>
+</body>
+<script>
+    window.addEventListener('resize', function () {
+        console.log('页面尺寸发生变化')
+    })
+    document.querySelector('.root').addEventListener('click', function (ev) {
+        // 140px 只包含到 padding 内
+        console.log(ev.target.clientHeight)
+        console.log(ev.target.clientWidth)
+        // 159px 包含 padding 和 border
+        console.log(ev.target.offsetHeight)
+        console.log(ev.target.offsetWidth)
+
+        console.log(ev.target.offsetTop)
+        console.log(ev.target.offsetLeft)
+    })
+    document.querySelector('.child').addEventListener('click', function (ev) {
+        // 30 30
+        console.log(ev.target.offsetTop)
+        console.log(ev.target.offsetLeft)
+    })
+
+</script>
+</html>

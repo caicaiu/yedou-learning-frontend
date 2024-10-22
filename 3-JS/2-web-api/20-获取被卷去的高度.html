@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        height: 10000px;
+    }
+
+    .root {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        overflow: scroll;
+    }
+</style>
+
+<body>
+<div class="root">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+    sapien vel malesuada luctus, velit turpis malesuada velit, ut
+    sollicitudin velit sapien vel velit. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia curae; Donec
+    venenatis, turpis vel malesuada luctus, velit turpis malesuada velit,
+</div>
+</body>
+<script>
+    document.querySelector('.root').addEventListener('scroll', function (event) {
+        console.log(event.target.scrollTop)
+    })
+    window.addEventListener('scroll', function (event) {
+        // 获取页面滚动高度
+        console.log(document.documentElement.scrollTop)
+    })
+</script>
+</html>

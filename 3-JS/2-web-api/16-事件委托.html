@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<ul id="parent">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+</body>
+<script>
+    var parent = document.querySelector('#parent');
+    parent.addEventListener('click', function (event) {
+        // event.target 就是被点击的元素
+        alert('You clicked on item' + event.target)
+    })
+</script>
+</html>

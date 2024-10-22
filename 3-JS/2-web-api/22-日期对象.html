@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    const date = new Date();
+    const specificDate = new Date("2024-10-22T10:30:00");
+
+    console.log(date.getFullYear())
+    console.log(date.getMonth() + 1)
+    console.log(date.getDate())
+    console.log(date.getHours())
+    console.log(date.getMinutes())
+    console.log(date.getSeconds())
+    console.log(date.getMilliseconds())
+
+    console.log("星期" + (date.getDay() + 1))
+    console.log("1970 - 现在的毫秒数" + date.getTime())
+
+
+    // 设置日期
+    const date2 = new Date();
+    date2.setFullYear(2024);
+    date2.setMonth(9);
+    date2.setDate(22);
+    date2.setHours(10);
+    date2.setMinutes(30);
+    date2.setSeconds(0);
+    date2.setMilliseconds(0);
+
+
+    const date3 = new Date();
+    // Tue Oct 22 2024 11:25:35 GMT+0800 (中国标准时间)
+    console.log(date3.toString())
+    // Tue Oct 22 2024  只包含年月日
+    console.log(date3.toDateString())
+    // 11:26:30 GMT+0800 (中国标准时间) 只包含时间
+    console.log(date3.toTimeString())
+
+    // 2024/10/22 11:26:53  包含年月日时分秒(且格式化)
+    console.log(date3.toLocaleString())
+    // 11:27:32  只包含时分秒
+    console.log(date3.toLocaleTimeString())
+
+    // 2024-10-22T03:27:51.207Z
+    console.log(date3.toISOString())
+
+    // Tue, 22 Oct 2024 03:28:21 GMT
+    console.log(date3.toUTCString())
+
+</script>
+</html>

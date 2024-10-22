@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    Person.prototype.sayHello = function () {
+        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.")
+    }
+    Person.prototype.address = "北京"
+
+    let person = new Person('拉开距离', 25);
+    person.sayHello();
+    let person2 = new Person("张是哪", 26)
+    person2.sayHello()
+    console.log(person2.address)
+</script>
+</html>

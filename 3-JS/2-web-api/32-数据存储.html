@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    localStorage.setItem('name', '拉开距离科技');
+    console.log(localStorage.getItem('name'));
+    let obj = {
+        username: '拉开距离科技',
+        age: 25,
+        email: 'xxxx@xxxx.com'
+    }
+    localStorage.setItem('user', JSON.stringify(obj))
+
+    let user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
+
+</script>
+</html>

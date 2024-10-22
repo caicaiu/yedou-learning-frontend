@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+<style>
+    .root {
+        height: 200px;
+        width: 200px;
+        background-color: skyblue;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+<div class="root">
+</div>
+</body>
+<script>
+    // document.querySelector('.root').addEventListener('mousemove', function (ev) {
+    //     console.log('mousemove');
+    //     ev.target.textContent = `x: ${ev.clientX}, y: ${ev.clientY}`;
+    // })
+    document.querySelector('.root').addEventListener('mousemove', _.debounce(function (ev) {
+            console.log('mousemove');
+            ev.target.textContent = `x: ${ev.clientX}, y: ${ev.clientY}`;
+    },1000))
+</script>
+</html>

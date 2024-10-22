@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function sum(a, b) {
+        if (b === 0) {
+            throw new Error("除数不能为0")
+        }
+    }
+
+    try {
+        sum(1, 0)
+    } catch (e) {
+        console.error(e.message)
+    } finally {
+        console.log("finally")
+    }
+
+
+    setInterval(function () {
+        console.log("hello")
+    }, 1000)
+</script>
+</html>

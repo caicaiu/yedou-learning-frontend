@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 1. 抽取相同属性放入到对象中
+    // const Person = {
+    //     eye: 2,
+    //     hair: 1,
+    // }
+    function  Person(){
+        this.eye = 2;
+        this.hair = 1;
+    }
+
+
+    function Woman(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    function Man(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // 2. 集成父类的属性和方法
+    // Woman.prototype = Person
+    // Man.prototype = Person
+
+    // 3. 需要指定构造函数 否则修改后的原型对象constructor就不再指向当前构造函数
+    Woman.prototype.constructor = Woman
+    Man.prototype.constructor = Man
+
+    // 4. 当在Woman.prototype上添加方法时， Man.prototype也会受到影响,因为他们都只想同一个对象
+    // 5.    解决方法： 手动指定构造函数的原型对象为Person(所以把Person也定义为构造函数)
+    Woman.prototype = new Person()
+    Man.prototype = new Person()
+
+    Woman.prototype.createChild = function () {
+        console.log("女儿出生了")
+    }
+
+
+    let woman = new Woman("小美", 25);
+    let man = new Man("小明", 30);
+    //  Woman.prototype.constructor 为什么是Man?
+    console.log(woman)
+    woman.createChild()
+
+
+    console.log(man)
+
+    // man.createChild is not a function
+    man.createChild()
+
+</script>
+</html>

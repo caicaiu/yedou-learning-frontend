@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Person.prototype = {
+    //     sayHello: function () {
+    //         console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+    //     },
+    //     sayBye: function () {
+    //         console.log("Bye, my name is " + this.name + " and I am " + this.age + " years old.");
+    //     }
+    // }
+
+    Person.prototype = {
+        constructor: Person, // 定义构造函数
+        sayHello: function () {
+            console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+        },
+        sayBye: function () {
+            console.log("Bye, my name is " + this.name + " and I am " + this.age + " years old.");
+        }
+    };
+    // Object
+    console.log(Person.prototype)
+
+    let person = new Person("拉开距离科技", 20);
+    // 无法调用sayBye方法，因为Person.prototype中没有定义该方法(上面的Person.prototype = 重新定义了原型对象)
+    person.sayHello();
+
+</script>
+</html>

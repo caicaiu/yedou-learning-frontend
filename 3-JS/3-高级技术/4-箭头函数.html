@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 箭头函数
+    const add = (a, b) => {
+        return a + b;
+    };
+    // 只有一行代码的时候，可以省略花括号和return关键字
+    const func = x => console.log(x)
+    // 只有一个参数的时候，可以省略括号
+    const square = x => {
+        return x * x;
+    }
+    // 只有一个返回语句的时候，可以省略花括号和return关键字
+    const hello = () => "Hello, world!"
+
+
+    // 可以返回一个对象
+    const personJson = () => ({
+        name: "拉开距离科技",
+        age: 2
+    })
+
+    const sum = () => {
+        //  arguments is not defined
+        console.log(arguments)
+    }
+    // sum()
+
+    // 箭头函数的this指向
+    const myFunc = function () {
+        console.log(this)
+    }
+    const myFunc2 = () => {
+        console.log(this)
+    }
+    myFunc() // window 谁调用就指向谁
+    myFunc2() // 方法内没有this,从外层找,找到window
+    console.log(this)
+
+
+    // 对象中的this指向
+    const myObj = {
+        name: "拉开距离科技",
+        sayName: function () {
+            console.log(this)
+        },
+        sayMyName: () => {
+            // 找到 myObj的{}中的this，发现没有，就向上找，找到window
+            console.log(this)
+        },
+        sayName2: function () {
+            console.log(this) // myObj
+            const count = () => {
+                // 自己没有this,从上面找，发现this是obj
+                console.log(this)
+            }
+            count() // myObj
+        }
+    }
+    myObj.sayName() // {name: '拉开距离科技', sayName: ƒ} 谁调用就指向谁
+    myObj.sayMyName() // window
+    myObj.sayName2()
+</script>
+</html>

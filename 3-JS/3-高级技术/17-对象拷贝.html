@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    let obj = {name: '拉开距离科技', age: 20, sex: '男'};
+    let cloneObj = {...obj};
+    console.log(cloneObj)
+    obj.name = '拉开距离科技2';
+    console.log(cloneObj)
+
+    let myObj = {
+        name: '拉开距离科技',
+        age: 20,
+        sex: '男',
+        hobby: ['篮球', '足球', '乒乓球'],
+        address: {
+            city: '北京',
+        }
+    }
+
+    function deepClone(source, target) {
+        for (let key in source) {
+            // 如果是对象，deepClone 递归调用
+            if (source[key] instanceof Object) {
+                target[key] = {}
+                deepClone(source[key], target[key])
+            } else if (source[key] instanceof Array) {
+                target[key] = []
+                // 数组的每一项都要拷贝
+                deepClone(source[key], target[key])
+            } else {
+                // 在 target 对象中创建或更新名为 key 的属性。
+                target[key] = source[key]
+            }
+
+        }
+    }
+
+    let newObj = {}
+    deepClone(myObj, newObj)
+    console.log(myObj.hobby)
+    myObj.address = {
+        city: '上海'
+    }
+    console.log(newObj.address, 'newObj')
+    console.log(myObj.address, 'myObj')
+    var deep = _.cloneDeep(myObj);
+    console.log(deep,'deep')
+    var stringify = JSON.stringify(myObj);
+    var parse = JSON.parse(stringify);
+    console.log(parse, 'parse')
+</script>
+</html>

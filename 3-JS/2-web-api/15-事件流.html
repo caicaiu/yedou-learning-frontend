@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .parent {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    .child {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>
+
+<body>
+<div class="parent">
+    <div class="child"></div>
+</div>
+</body>
+<script>
+    document.addEventListener('click', function (event) {
+        alert("document click")
+    });
+    document.querySelector('.parent').addEventListener('click', function (event) {
+        alert("parent click");
+    });
+    document.querySelector('.child').addEventListener('click', function (event) {
+        alert("child click");
+        event.stopPropagation(); // 阻止事件冒泡
+    });
+</script>
+</html>

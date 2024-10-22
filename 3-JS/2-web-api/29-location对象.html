@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <button>点击跳转</button>
+    <button id="refresh">点击刷新</button>
+</body>
+<script>
+    console.log(window.location)
+    console.log(location.protocol)
+    document.querySelector('button').addEventListener('click', function () {
+        location.href = "https://www.baidu.com"
+    })
+    document.querySelector('#refresh').addEventListener('click', function () {
+        location.reload()
+    })
+</script>
+</html>

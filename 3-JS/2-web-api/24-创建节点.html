@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    <ul>
+        <li>1</li>
+    </ul>
+</div>
+</body>
+<script>
+    var liBefore = document.createElement("li");
+    liBefore.textContent = "我是前面的节点"
+    var parent = document.querySelector("ul");
+    /*插入到子节点之前*/
+    var children = parent.children;
+    console.log(children)
+    parent.insertBefore(liBefore,children[0])
+
+
+
+    var appendLi = document.createElement('li');
+    appendLi.textContent = "我是后面的节点"
+    parent.append(appendLi)
+</script>
+</html>

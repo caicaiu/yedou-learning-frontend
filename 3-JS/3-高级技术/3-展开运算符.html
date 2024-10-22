@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 在数组中的使用
+    let arr = [1, 2, 4]
+    // 展开数组 1 2 4
+    console.log(...arr)
+
+    // 复制 [1, 2, 4, 3, 5, 6]
+    let arr2 = [...arr, 3, 5, 6]
+    console.log(arr2)
+
+
+    // 在函数调用中的使用
+    const myFunc = function (a, b, c) {
+        return a + b + c;
+    }
+    let arr3 = [1, 2, 3];
+    // 6
+    console.log(myFunc(...arr3))
+
+    // 对象复制
+    let obj = {
+        name: "张三",
+        age: 30
+    }
+    let cloneObj = {...obj}
+    // {name: '张三', age: 30}
+    console.log(cloneObj)
+
+    // 对象合并
+    let addressObj = {
+        address: "中国"
+    }
+    // {name: '张三', age: 30, address: '中国'}
+    console.log({...obj, ...addressObj})
+
+</script>
+</html>
