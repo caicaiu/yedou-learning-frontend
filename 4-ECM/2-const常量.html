@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+</div>
+</body>
+<script>
+    const A = 10;
+    // A = 30; // 报错，常量不能被修改
+
+    {
+        const B = 20;
+    }
+    console.log(B) // 报错，常量不能在局部作用域外访问
+
+    const arr = [1, 2, 3];
+    arr[1] = 30; // 数组元素可以被修改
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        get getName() {
+            console.log("get name ")
+            return this.name;
+        }
+
+        set setName(name) {
+            console.log("set name ")
+            this.name = name;
+        }
+    }
+    let person = new Person("拉开距离", 25);
+    console.log(person.getName); // get name
+    person.setName = "科技";
+</script>
+</html>

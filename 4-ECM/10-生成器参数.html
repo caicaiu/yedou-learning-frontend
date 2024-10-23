@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function* generator(arg) {
+        console.log(arg) //hello world
+        let one = yield 1;
+        console.log(one, 'one')
+
+        let two = yield 2;
+        console.log(two)
+        yield 3;
+    }
+
+    // 只能有一个参数
+    const gen = generator('hello world');
+    // 当调用next方法时，给他的实参会被返回
+    console.log(gen.next('AAA')); // { value: 1, done: false }
+    // 当第二次调用next的时候，他的实参会被第一个yield接收
+    console.log(gen.next('BBB')); // { value: 2, done: false }
+    console.log(gen.next('CCC'))
+
+</script>
+</html>

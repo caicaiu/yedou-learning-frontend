@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function one() {
+        setTimeout(function () {
+            console.log("one")
+        }, 1000)
+    }
+
+    function two() {
+        setTimeout(function () {
+            console.log("two")
+        }, 2000)
+    }
+
+    function three() {
+        setTimeout(function () {
+            console.log("three")
+        }, 3000)
+    }
+
+    function* gen() {
+        yield one();
+        yield two();
+        yield three();
+    }
+
+    // 将异步操作变为同步操作
+    let iterator = gen();
+    iterator.next();
+</script>
+</html>

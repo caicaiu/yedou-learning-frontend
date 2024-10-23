@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        sayHello(){
+            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        }
+    }
+    class Student extends Person{
+        constructor(name,age,grade){
+            super(name,age);
+            this.grade = grade;
+        }
+        sayHello(){
+            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old, and I am in grade ${this.grade}.`);
+        }
+    }
+    // Hello, my name is John and I am 18 years old, and I am in grade 3.
+    const student = new Student("John", 18, 3);
+    student.sayHello();
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    function test(a, b) {
+        return a + b;
+    }
+
+    // 箭头函数
+    const test1 = (a, b) => {
+        return a + b;
+    }
+
+    // 2. 不能作为构造函数
+    // const person = (name, age) => {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // // person is not a constructor
+    // let south = new person("south", 25); // 报错
+    // console.log(south)
+
+    // 3. 参数只有一个时，可以省略括号
+    const test2 = a => {
+        return a + 10;
+    }
+    // 4. 代码只有一行时，可以省略大括号
+    const test3 = a => a + 10;
+
+</script>
+</html>

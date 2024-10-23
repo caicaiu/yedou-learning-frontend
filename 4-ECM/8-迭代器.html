@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    let arr = ["孙悟空", "猪八戒", "沙和尚", "唐僧", "白骨精", "蜘蛛精", "蜘蛛女"]
+    let iterator = arr[Symbol.iterator]()
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+
+    // 自定义迭代器
+    let obj = {
+        name: "孙悟空",
+        hobby: ["吃饭", "睡觉", "打豆豆"],
+        [Symbol.iterator]() {
+            let index = 0;
+            let _this = this;
+            return {
+
+                next() {
+                    if (index < _this.hobby.length) {
+                        return {
+                            value: _this.hobby[index++],
+                            done: false
+                        }
+                    } else {
+                        return {
+                            value: undefined,
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // obj is not iterable
+    for (let item of obj) {
+        console.log(item)
+    }
+</script>
+</html>

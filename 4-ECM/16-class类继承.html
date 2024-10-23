@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 类的继承
+    class Animal {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        sayHello() {
+            console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+        }
+    }
+
+    class Dog extends Animal {
+        constructor(name, age, color) {
+            super(name, age);
+            this.color = color;
+        }
+    }
+
+    let dog = new Dog("Rufus", 2, "black");
+    dog.sayHello();
+</script>
+</html>

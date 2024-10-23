@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    const myMap = new Map();
+    myMap.set('name', '拉开距离科技');
+    console.log(myMap.get('name'));
+    console.log(myMap.has('name'))
+    myMap.delete('name');
+    console.log(myMap.has('name'))
+
+
+    myMap.set('name', 'Alice').set('age', 25);
+    myMap.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+    });
+</script>
+</html>

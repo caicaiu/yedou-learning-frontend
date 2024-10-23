@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 构造方法创建对象
+    function Person(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+
+    Person.prototype.sayHello = function () {
+        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+    }
+    var person1 = new Person("John", 25, "male");
+    person1.sayHello();
+
+    // 使用类创建对象
+    class Woman {
+        constructor(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+
+        sayHello() {
+            console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+        }
+    }
+
+    var person2 = new Woman("Jane", 23, "female");
+    person2.sayHello();
+
+
+    // 静态成员和方法
+    class Math{
+        static PI = 3.141592653589793;
+        static square(x) {
+            return x * x;
+        }
+    }
+    console.log(Math.PI)
+    console.log(Math.square(3))
+</script>
+</html>

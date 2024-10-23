@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    // 变量不能重复声明 Identifier 'a' has already been declared
+    let a = 10;
+    console.log(a)
+    // let a = 30;// 报错
+
+    // 变量只能在代码块中使用
+    function test() {
+        let b = 20;
+    }
+
+    // console.log(b)
+
+    // 不存在变量提升
+    // console.log(c) // 报错
+    let c = 40;
+
+    // 在作用域链中查找变量
+    let d = 50;
+
+    function test2() {
+        console.log(d)
+    }
+</script>
+</html>
