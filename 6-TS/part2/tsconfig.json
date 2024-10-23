@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "outFile": "./dist/bundle.js",
+    // // 严格模式
+    "alwaysStrict": true,
+    "noImplicitAny" : true,
+  },
+  "include": [
+    "./src/**/*",
+    // 包含 src 目录下的所有 TypeScript 文件
+    "./tests/**/*.ts"
+    // 包含 tests 目录及其子目录下的所有 TypeScript 文件
+  ],
+  "extends": "./base.tsconfig.json",
+  "exclude": [
+    "./src/hello/*",
+    // 排除 src/hello 目录下的所有 TypeScript 文件
+    "node_modules",
+    // 排除 node_modules 目录
+    "dist",
+    // 排除 dist 目录
+    "**/*.spec.ts"
+    // 排除所有测试文件
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    const func = async () => {
+        console.log('开始执行异步函数')
+        throw new Error('异步函数执行出错')
+    }
+    func().then(() => {
+        console.log("异步函数执行完毕")
+    }).catch(err => {
+        console.log("异步函数执行出错")
+    })
+
+    const func2 = async () => {
+        // 异步函数2执行完毕
+        let result = await new Promise((resolve, reject) => {
+            return resolve('异步函数2执行完毕')
+        })
+        console.log(result)
+    }
+    console.log(func2)
+    func()
+</script>
+</html>

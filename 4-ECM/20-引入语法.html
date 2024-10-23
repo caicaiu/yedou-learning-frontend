@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script type="module">
+    // 统一引入
+    import * as m1 from './js/min.js'
+
+    // 结构引入
+    import {school, sayHello} from "./js/test2.js";
+    import {default as m2} from './js/test3.js'
+
+    // 简便写法，针对默认导出
+    import m3 from './js/test3.js'
+
+
+    console.log(m1)
+    console.log(school)
+    sayHello()
+    console.log(m2)
+    console.log(m3)
+</script>
+</html>

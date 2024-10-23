@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+.root{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+</style>
+
+<body>
+<div class="root">
+    拉开距离科技
+</div>
+</body>
+<script>
+    document.querySelector('.root').addEventListener('click', function () {
+        import('./js/min.js').then(module => {
+            console.log(module)
+        });
+    });
+</script>
+</html>
